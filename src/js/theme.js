@@ -40,7 +40,6 @@ jQuery(window).load(function() {
     // Adjust Header Menu On Scroll Down
     $(window).scroll(function() {
         var wScroll = $(this).scrollTop();
-        var wh = $(window).height();
         if (wScroll > 40) {
             $(".menu-style-1").addClass('dark-header-area');
             $(".menu-style-2").addClass('dark-header-area');
