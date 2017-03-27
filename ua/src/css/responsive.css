@@ -1,0 +1,437 @@
+/* Medium Layout: 1280px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* 
+    ----------------------------------
+    - Header Area Style
+    ----------------------------------
+    */
+    /* Display Mobile Menu in iPad */
+    .navbar-header {
+        float: none;
+        padding: 30px 0px 20px 0px;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block!important;
+        border-top: 1px solid #fff;
+        padding-top: 0px;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+    .navbar-brand > img {
+        max-width: 70%;
+    }
+    .navbar-toggle {
+        border: 0px;
+    }
+    .navbar .navbar-nav li {
+        width: 100%;
+        right: 0 !important;
+    }
+    .navbar-right {
+        float: right !important;
+        /* margin-right: 15px !important; */
+        margin-top: 0px !important;
+        width: 98%;
+    }
+    .navbar-right li {
+        margin-right: 0 !important;
+    }
+    .right-menu {
+        padding: 22px 15px 20px 0;
+    }
+    .navbar-toggle {
+        display: block;
+        border: 0px;
+        background: none;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-default .navbar-collapse {
+        margin-top: 17px;
+    }
+    .navbar-default .navbar-collapse.collapse.in {
+        display: block!important;
+        border-top: none;
+        margin-top: 0px;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+    /* Menu Style 1 & 2 */
+    .menu-style-1 .navbar {
+        padding-top: 0;
+    }
+    .menu-style-1 .navbar .navbar-brand,
+    .menu-style-2 .navbar .navbar-brand {
+        padding: 0px;
+        margin: 0px;
+        width: 50%;
+        height: auto;
+    }
+    .menu-style-1 .navbar .navbar-brand img,
+    .menu-style-2 .navbar .navbar-brand img {
+    
+    }
+    .menu-style-1 .navbar-default .navbar-nav > .active > a:after,
+    .menu-style-2 .navbar-default .navbar-nav > .active > a:after {
+        right: 40px;
+    }
+    .menu-style-1 .navbar .navbar-nav {
+        background: #fff;
+        margin-top: 10px;
+        display: block;
+        float: left;
+        left: 0;
+    }
+    .menu-style-2 .navbar .navbar-nav {
+        background: #0379AE;
+    }
+    /* Menu Style 3 */
+    .menu-style-3 .navbar-header {
+        padding: 0px;
+    }
+    .menu-style-3 .navbar-nav.navbar-right li a {
+        display: inline-block;
+    }
+    .menu-style-1 .navbar-default .navbar-right {
+        background: none;
+    }
+    /* 
+    ----------------------------------
+    - Hero Area Style
+    ----------------------------------
+    */
+    .speaker,
+    .headphone,
+    .pencil,
+    .frame,
+    .black-tab,
+    .mouse {
+        display: none;
+    }
+    .hero-area-content-inner {
+        padding-left: 0px;
+    }
+    .hero-area-content .title {
+        font-size: 2.8rem;
+        line-height: 60px;
+    }
+    .hero-area-content .subtitle {
+        font-size: 1.8rem;
+        line-height: 48px;
+    }
+    .hero-area-content .after-subtitle {
+        font-size: 1.6rem;
+        line-height: 40px;
+        margin-bottom: 2.5rem;
+    }
+    /* 
+    ----------------------------------
+    - Pricing Area Style
+    ----------------------------------
+    */
+    .pricing-table {
+        margin-bottom: 30px;
+    }
+    /* 
+    ----------------------------------
+    - Contact Area Style
+    ----------------------------------
+    */
+    .contact-area {
+        background-image: none;
+    }
+    /* 
+    ----------------------------------
+    - Algoritm Area on Pages
+    ----------------------------------
+    */
+    .algoritm-area .img:last-child {
+        right: 0px;
+    }
+}
+
+/* Mobile Layout: 767px. */
+
+@media only screen and (max-width: 767px) {
+    /* 
+    ----------------------------------
+    - Default Style
+    ----------------------------------
+    */
+    html {
+        font-size: 16px;
+        line-height: 27px;
+    }
+    .single-img-box {
+        margin-bottom: 30px;
+    }
+    .circle-top-icon {
+        margin-bottom: 30px;
+    }
+    /* 
+    ----------------------------------
+    - Header Style
+    ----------------------------------
+    */
+    /* Default Style */
+    .navbar-header {
+        float: none;
+        padding-top: 10px;
+    }
+    .navbar-default .navbar-collapse {
+        margin-top: 17px;
+    }
+    .navbar-collapse.collapse.in {
+        margin-top: 17px;
+    }
+    .navbar-right li {
+        display: inline-block;
+    }
+    .navbar-right li:first-child a {
+        margin-left: 10px;
+    }
+    .menu-style-1 .navbar .navbar-nav li a {
+        padding: 10px;
+    }
+    /* Menu 1 & 2 Style */
+    .menu-style-1 .navbar,
+    .menu-style-2 .navbar {
+        padding: 20px 0px;
+    }
+    .menu-style-1 .navbar .navbar-brand,
+    .menu-style-2 .navbar .navbar-brand {
+        padding: 0px;
+        margin: 0px;
+        width: 50%;
+        height: auto;
+    }
+    .menu-style-1 .navbar .navbar-brand img,
+    .menu-style-2 .navbar .navbar-brand img {
+
+    }
+    .menu-style-1 .navbar-default .navbar-nav > .active > a:after,
+    .menu-style-2 .navbar-default .navbar-nav > .active > a:after {
+        right: 40px;
+    }
+    .menu-style-1 .navbar .navbar-nav {
+        background: #fff;
+    }
+    .menu-style-2 .navbar .navbar-nav {
+        background: #0379AE;
+    }
+    .menu-style-1 .navbar .navbar-nav {
+        left: 0;
+    }
+    .menu-style-1 .navbar .navbar-nav li {
+        right: 0;
+    }
+    /* Menu Style 3 */
+    .menu-style-3 .top-info-area .top-info {
+        text-align: center;
+    }
+    .menu-style-3 .navbar-header {
+        text-align: center;
+        margin: 0px;
+    }
+    .menu-style-3 .navbar-default .navbar-toggle {
+        float: none;
+        margin: 10px auto auto auto;
+        border-radius: 0px;
+    }
+    .menu-style-3 .navbar-header {
+        padding: 0px;
+    }
+    .menu-style-1 .navbar-default .navbar-right {
+        background: none;
+    }
+    
+    /* 
+    ----------------------------------
+    - Hero Area Style
+    ----------------------------------
+    */
+    /* Home-1 */
+    .hero-area {
+        height: 100vh;
+    }
+    .speaker,
+    .headphone,
+    .pencil,
+    .frame,
+    .black-tab,
+    .mouse {
+        display: none;
+    }
+    .hero-area-content-inner {
+        text-align: center;
+    }
+    .hero-area-content .title {
+        font-size: 2.8rem;
+        line-height: 60px;
+    }
+    .hero-area-content .subtitle {
+        font-size: 1.8rem;
+        line-height: 48px;
+    }
+    .hero-area-content .after-subtitle {
+        font-size: 1.6rem;
+        line-height: 40px;
+        margin-bottom: 2.5rem;
+    }
+    .hero-area-content-inner h1 {
+        line-height: 1.1;
+    }
+    .hero-area-content-inner img {
+        display: none;
+    }
+    #contact-form-call .form-control {
+        width: 95%;
+        margin: 0 2.5%;
+    }
+    #contact-form-call .btn {
+        width: 95%;
+        margin: 20px 2.5%;
+    }
+    /* 
+    ----------------------------------
+    - Fun Fact Area Style
+    ----------------------------------
+    */
+    .fun-item {
+        margin-bottom: 50px;
+    }
+    .last .fun-item {
+        margin-bottom: 0px;
+    }
+    /* 
+    ----------------------------------
+    - App Download Area Style
+    ----------------------------------
+    */
+    .app-download-content {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .app-download-area form {
+        text-align: center;
+    }
+    .app-download-content-2 {
+        text-align: center;
+    }
+    .app-download-content-2 .icon {
+        margin-top: 30px;
+    }
+    /* 
+    ----------------------------------
+    - Pricing Area Style
+    ----------------------------------
+    */
+    .pricing-table {
+        margin-bottom: 30px;
+    }
+    /* 
+    ----------------------------------
+    - Begin Area on Pages
+    ----------------------------------
+    */
+    .begin-area .img {
+        text-align:center;
+    }
+    .begin-area .img img {
+        max-width: 90px !important;
+    }
+    /* 
+    ----------------------------------
+    - Algoritm Area on Pages
+    ----------------------------------
+    */
+    .algoritm-area .img {
+        text-align: center;        
+    }
+    .algoritm-area .img:last-child {
+        right: 0px;
+        text-align: center; 
+    }
+    /* 
+    ----------------------------------
+    - Contact Area Style
+    ----------------------------------
+    */
+    .icon-box-left {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .contact-area {
+        background-image: none;
+    }
+    .contact-form-area .button {
+        text-align: center;
+    }
+    /* 
+    ----------------------------------
+    - Footer
+    ----------------------------------
+    */
+    .footer-social ul li a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        margin-right: 0px;
+        color: #0379ae;
+    }
+    #footer-contact-form-call .form-control {
+        width: 95%;
+        margin: 0 2.5%;
+    }
+    #footer-contact-form-call .btn {
+        width: 95%;
+        margin: 20px 2.5%;
+    }
+}
+
+
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {}
+
+/* Wide Mobile Layout: 375px. */
+
+@media only screen and (min-width: 240px) and (max-width: 375px) {
+    /* 
+    ----------------------------------
+    - Default Style
+    ----------------------------------
+    */
+    .btn,
+    a.btn {
+        padding: 5px 20px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    /* 
+    ----------------------------------
+    - Header Section Style
+    ----------------------------------
+    */
+    .contact-social {
+        display: none;
+    }
+}

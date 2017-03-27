@@ -1,0 +1,157 @@
+.accordion-title {
+    height: 40px;
+    margin: 7px auto 16px auto;
+    text-align: center;
+}
+.accordion-title a {
+    color: #fff;
+    font-family: 'Gothic', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.accordion-title ul {
+     padding: 0;
+     margin: 0;
+}
+
+.accordion-title ul li {
+    width: 20%;
+    float: left;
+    padding: 10px 0;
+    background: #ccc;
+    border-right: 7px solid #efeff0;
+    box-sizing: border-box;
+}
+
+.accordion-title ul li:last-child {
+    border-right: none;
+}
+
+.accordion {  
+    height: 350px; 
+    overflow: hidden; 
+    margin: 0 auto;
+} 
+ 
+.accordion ul { 
+    width: 100%; 
+    display: table; 
+    table-layout: fixed; 
+    margin: 0; 
+    padding: 0; 
+} 
+ 
+.accordion ul li {
+    position: relative;
+    display: table-cell; 
+    vertical-align: bottom; 
+    width: 16.666%; 
+    height: 350px;
+    border-right: 7px solid #efeff0;
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    transition: all 500ms ease;
+} 
+.accordion ul li:last-child {
+    border-right: none;
+}
+.accordion .text {
+    position: relative;
+    right: 50%;
+    float: right;
+    height: 350px;
+}
+
+.accordion .text p {
+    opacity: 0;
+    margin: 0; 
+    position: relative;
+    top: 37%;
+    right: -50%;
+    z-index: 3; 
+    color: #fff; 
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    transition: all 200ms ease;
+} 
+
+.accordion ul li:nth-child(1) {
+    background-image: url("../img/site-profile.png");
+} 
+ 
+.accordion ul li:nth-child(2) {
+    background-image: url("../img/site-lending.png");
+} 
+ 
+.accordion ul li:nth-child(3) {
+    background-image: url("../img/site-corporate.png");
+} 
+ 
+.accordion ul li:nth-child(4) {
+    background-image: url("../img/site-intrnet-shop.png");
+} 
+ 
+.accordion ul li:nth-child(5) {
+    background-image: url("../img/site-blog.png");
+}
+
+.accordion ul:hover li {
+    width: 10%;
+} 
+ 
+.accordion ul:hover li:nth-child(1):hover {
+    width: 60%;
+    background-image: url("../img/site-profile-hover.png");
+}
+
+.accordion ul:hover li:nth-child(2):hover {
+    width: 60%;
+    background-image: url("../img/site-lending-hover.png");
+}
+
+.accordion ul:hover li:nth-child(3):hover {
+    width: 60%;
+    background-image: url("../img/site-corporate-hover.png");
+}
+
+.accordion ul:hover li:nth-child(4):hover {
+    width: 60%;
+    background-image: url("../img/site-intrnet-shop-hover.png");
+}
+
+.accordion ul:hover li:nth-child(5):hover {
+    width: 60%;
+    background-image: url("../img/site-blog-hover.png");
+}
+
+.accordion ul:hover li:hover p {
+    opacity: 1;
+    -webkit-transform: translateX(0); 
+    transform: translateX(0); 
+}
+
+.accordion ul:hover li:hover .shadow p {
+    opacity: 0;
+}
+
+.accordion .shadow {
+    display: none;
+}
+
+.accordion ul:hover li:hover .shadow {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 767px){
+     .accordion, .accordion-title {
+          display:none;
+     }
+}

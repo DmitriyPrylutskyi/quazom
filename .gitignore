@@ -1,0 +1,19 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+# IntelliJ project files
+.idea
+/css/
+/dist/
+/js/
+/node_modules/
+/temp/
+/a2a152bf1aaf.html
+/df79bba705e1.html
+/ru/css/
+/ru/dist/
+/ru/js/
+/ru/node_modules/
+/ua/css/
+/ua/dist/
+/ua/js/
+/ua/node_modules/

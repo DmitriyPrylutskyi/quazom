@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin
+Disallow: /404.html
+Disallow: /ru/404.html
+Disallow: /ua/404.html
+Host: http://quazom.com/
+Sitemap: http://quazom.com/sitemap.xml
