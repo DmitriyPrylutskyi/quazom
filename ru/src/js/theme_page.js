@@ -28,7 +28,6 @@ jQuery(window).load(function() {
     // Adjust Header Menu On Scroll Down
     $(window).scroll(function() {
         var wScroll = $(this).scrollTop();
-        var wh = $(window).height();
         if (wScroll > 40) {
             $(".menu-style-1").addClass('dark-header-area');
             $(".menu-style-2").addClass('dark-header-area');
@@ -73,13 +72,13 @@ jQuery(window).load(function() {
         var link = $(this).attr("href").substr(0, 3);
         switch (link) {
           case "/ru":
-            var lang = "ru"
+            var lang = "ru";
             break;
           case "/ua":
-            var lang = "uk"
+            var lang = "uk";
             break;
           default :
-            var lang = "en"
+            var lang = "en";
             break;
         }
         var options = {};
@@ -108,7 +107,7 @@ jQuery(window).load(function() {
             error: function(data) {
             }
         });
-        if (id == "#contact-form-mail") window.location.href = "#modal-mail";
+        if (id === "#contact-form-mail") window.location.href = "#modal-mail";
             else window.location.href = "#modal-call";
     });
 
@@ -146,7 +145,7 @@ function setCookie(name, value, options) {
 
   var expires = options.expires;
 
-  if (typeof expires == "number" && expires) {
+  if (typeof expires === "number" && expires) {
     var d = new Date();
     d.setTime(d.getTime() + expires * 1000);
     expires = options.expires = d;
@@ -186,16 +185,16 @@ function relocate() {
     };
     var lang = getCookie("lang");
     var url = window.location.href.substr(-4, 3);
-    if (url.indexOf("/ru") == - 1 && url.indexOf("/ua") == -1) url = "/";
+    if (url.indexOf("/ru") === - 1 && url.indexOf("/ua") === -1) url = "/";
     if (lang !== undefined && url !== sites[lang]) {
         window.location.href = sites[lang];
     }
         else {
             if (lang === undefined ) {
-                var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage).substr(0, 2).toLowerCase();
-                if (lang == 'hy' || lang == 'az' || lang == 'ka' || lang == 'kk' || lang == 'ky' || lang == 'mo' || lang == 'tg' || lang == 'tk'
-                || lang == 'uz' || lang == 'be') lang == 'ru';
-                if (lang !== 'uk') lang == 'en';
+                lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage).substr(0, 2).toLowerCase();
+                if (lang === 'hy' || lang === 'az' || lang === 'ka' || lang === 'kk' || lang === 'ky' || lang === 'mo' || lang === 'tg' || lang === 'tk'
+                || lang === 'uz' || lang === 'be') lang = 'ru';
+                if (lang !== 'uk' && lang !== 'ru') lang = 'en';
                 if (url !== sites[lang]) window.location.href = sites[lang];
             }
         }

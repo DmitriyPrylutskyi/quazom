@@ -189,7 +189,7 @@ function myMap() {
         scrollwheel: false,
         streetViewControl: false,
         mapTypeControl: false
-    }
+    };
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     new google.maps.Marker({
         position: new google.maps.LatLng(46.974492, 31.992592),
@@ -206,7 +206,7 @@ function setCookie(name, value, options) {
 
   var expires = options.expires;
 
-  if (typeof expires == "number" && expires) {
+  if (typeof expires === "number" && expires) {
     var d = new Date();
     d.setTime(d.getTime() + expires * 1000);
     expires = options.expires = d;
@@ -246,16 +246,16 @@ function relocate() {
     };
     var lang = getCookie("lang");
     var url = window.location.href.substr(-4, 3);
-    if (url.indexOf("/ru") == - 1 && url.indexOf("/ua") == -1) url = "/";
+    if (url.indexOf("/ru") === - 1 && url.indexOf("/ua") === -1) url = "/";
     if (lang !== undefined && url !== sites[lang]) {
         window.location.href = sites[lang];
     }
         else {
             if (lang === undefined ) {
                 lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage).substr(0, 2).toLowerCase();
-                if (lang == 'hy' || lang == 'az' || lang == 'ka' || lang == 'kk' || lang == 'ky' || lang == 'mo' || lang == 'tg' || lang == 'tk'
-                || lang == 'uz' || lang == 'be') lang == 'ru';
-                if (lang !== 'uk') lang == 'en';
+                if (lang === 'hy' || lang === 'az' || lang === 'ka' || lang === 'kk' || lang === 'ky' || lang === 'mo' || lang === 'tg' || lang === 'tk'
+                || lang === 'uz' || lang === 'be') lang = 'ru';
+                if (lang !== 'uk' && lang !== 'ru') lang = 'en';
                 if (url !== sites[lang]) window.location.href = sites[lang];
             }
         }
