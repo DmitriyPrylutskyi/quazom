@@ -11,6 +11,7 @@ var           gulp = require('gulp'),
   stripCssComments = require('gulp-strip-css-comments'),
  stripHtmlComments = require('gulp-strip-comments'),
            version = require('gulp-version-number'),
+        makeUrlVer = require('gulp-make-css-url-version'),
              clean = require('gulp-clean');
 
 const versionConfig = {
@@ -36,15 +37,21 @@ gulp.task('stripcss', ['copyjs'], function () {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('uncss', ['stripcss'], function () {
-  /*return gulp.src('./css/style.css')
+gulp.task('stylesheets', ['stripcss'], function() {
+    return gulp.src(['css/*css', '!css/*min.css'])
+        .pipe(makeUrlVer({useDate:true, format:"yyyyMdhmsS"}))
+        .pipe(gulp.dest('css'));
+});
+
+/*gulp.task('uncss', ['stripcss'], function () {
+  return gulp.src('./css/style.css')
     .pipe(uncss({
       html: ['index.html']
     }))
-    .pipe(gulp.dest('css'));*/
-});
+    .pipe(gulp.dest('css'));
+});*/
 
-gulp.task('comb', ['uncss'], function () {
+gulp.task('comb', ['stylesheets'], function () {
   return gulp.src('*.html')
     .pipe(useref())
     .pipe(gulpif('*.js', uglify()))

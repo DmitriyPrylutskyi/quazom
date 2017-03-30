@@ -557,20 +557,6 @@ Table of Contents
     z-index: 0;
     overflow: hidden;
 }
-.mosue-wheel {
-    content: "";
-    position: absolute;
-    background-image: url('../img/mouse-pointer.png');
-    width: 39px;
-    height: 66px;
-    bottom: -33px;
-    left: 0px;
-    right: 0px;
-    margin: 0 auto;
-    z-index: 10;
-    -webkit-animation: upDown 3s infinite;
-    animation: upDown 3s infinite;
-}
 @keyframes upDown {
     0% {
         bottom: -33px;
