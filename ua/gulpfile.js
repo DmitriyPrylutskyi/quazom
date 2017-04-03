@@ -8,38 +8,37 @@ var           gulp = require('gulp'),
             gulpif = require('gulp-if'),
             useref = require('gulp-useref'),
            htmlmin = require('gulp-htmlmin'),
+          imagemin = require('gulp-imagemin'),
   stripCssComments = require('gulp-strip-css-comments'),
  stripHtmlComments = require('gulp-strip-comments'),
-           version = require('gulp-version-number'),
+           version = require('gulp-resource-hash'),
         makeUrlVer = require('gulp-make-css-url-version'),
              clean = require('gulp-clean');
-
-const versionConfig = {
-    'value': '%TS%',
-    'append': {
-        'key': 'v',
-        'to': ['css', 'js', 'image']
-    }
-};
 
 gulp.task('clean', function () {
   return gulp.src(['css', 'js', 'dist'], {read: false}).pipe(clean());
 });
 
 gulp.task('copyjs', ['clean'], function () {
-    return gulp.src(['src/js/*.js'])
+    return gulp.src('src/js/*.js')
         .pipe(gulp.dest('js'));
 });
 
-gulp.task('stripcss', ['copyjs'], function () {
-  return gulp.src('./src/css/*.css')
+gulp.task('imagemin', ['copyjs'], function() {
+    return gulp.src('img/**/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'))
+});
+
+gulp.task('stripcss', ['imagemin'], function () {
+  return gulp.src('src/css/*.css')
     .pipe(stripCssComments({preserve:false}))
     .pipe(gulp.dest('css'));
 });
 
 gulp.task('stylesheets', ['stripcss'], function() {
     return gulp.src(['css/*css', '!css/*min.css'])
-        .pipe(makeUrlVer({useDate:true, format:"yyyyMdhmsS"}))
+        .pipe(makeUrlVer())
         .pipe(gulp.dest('css'));
 });
 
@@ -60,13 +59,13 @@ gulp.task('comb', ['stylesheets'], function () {
 });
 
 gulp.task('version', ['comb'], function() {
-    return gulp.src('./dist/*.html')
-        .pipe(version(versionConfig))
+    return gulp.src('dist/*.html')
+        .pipe(version({asset: 'dist', exts: ['js', 'css', 'png', 'jpg', 'svg', 'ico']}))
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', ['version'], function() {
-  return gulp.src('./dist/*.html')
+  return gulp.src('dist/*.html')
     .pipe(stripHtmlComments({safe: true}))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'));
