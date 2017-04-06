@@ -89,26 +89,26 @@ jQuery(window).load(function() {
 
     // Submit form using AJAX
     $("form").on("submit", function(event) {
-        // Stop the browser from submitting the form.
-        event.preventDefault();
         var id = "#" + $(this).attr('id');
-        console.log(id);
-        // Serialize the form data.
-        var formData = $(id).serialize();
-        console.log(formData);
-        // Submit the form using AJAX.
-        $.ajax({
-            type: 'POST',
-            url: $(id).attr('action'),
-            data: formData,
-            success: function(response) {
-                $(id).trigger("reset");
-            },
-            error: function(data) {
-            }
-        });
-        if (id === "#contact-form-mail") window.location.href = "#modal-mail";
-            else window.location.href = "#modal-call";
+        if (id !="#download") {
+            // Stop the browser from submitting the form.
+            event.preventDefault();
+            // Serialize the form data.
+            var formData = $(id).serialize();
+            // Submit the form using AJAX.
+            $.ajax({
+                type: 'POST',
+                url: $(id).attr('action'),
+                data: formData,
+                success: function(response) {
+                    $(id).trigger("reset");
+                    if (id === "#contact-form-mail") window.location.href = "#modal-mail";
+                        else window.location.href = "#modal-call";                
+                },
+                error: function(data) {
+                }
+            });
+        };
     });
 
     // Hero Parallax
